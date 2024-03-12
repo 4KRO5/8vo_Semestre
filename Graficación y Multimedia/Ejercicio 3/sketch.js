@@ -8,14 +8,18 @@ function draw() {
 	background(220);
 
 	for (let i = 0; i < circulos.length; i++) {
+		for (let j = i+1; j < circulos.length; j++) {
+			circulos[i].colisionar(circulos[j]);
+		}
 		circulos[i].mover();
 		circulos[i].mostrar();
 	}
 }
 
 function mousePressed() {
-	let c = new Circulo(mouseX, mouseY, 50);
-	circulos.push(c);
+	let x = constrain(mouseX, 25, width - 25);
+	let y = constrain(mouseY, 25, height - 25);
+	circulos.push(new Circulo(x, y, 50));
 }
 
 class Circulo {
@@ -23,8 +27,8 @@ class Circulo {
 		this.x = x;
 		this.y = y;
 		this.d = d;
-		this.xSpeed = random(-3, 3);
-		this.ySpeed = random(-3, 3);
+		this.xSpeed = random(-2, 2);
+		this.ySpeed = random(-2, 2);
 	}
 
 	mover() {
@@ -60,17 +64,3 @@ class Circulo {
 		}
 	}
 }
-
-function draw() {
-	background(220);
-
-	for (let i = 0; i < circulos.length; i++) {
-		for (let j = 0; j < circulos.length; j++) {
-			if (i != j) {
-				circulos[i].colisionar(circulos[j]);
-			}
-		}
-		circulos[i].mover();
-		circulos[i].mostrar();
-	}
-}  
