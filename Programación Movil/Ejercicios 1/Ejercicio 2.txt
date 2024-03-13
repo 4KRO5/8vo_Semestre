@@ -1,0 +1,30 @@
+fun main() {
+    val pepino = 20
+    val aguacate = 65
+    val tomate = 4
+    val nopales = 15 / 5
+    val manzana = 20
+
+    val cantidadPepinos = 3
+    val cantidadAguacates = 2
+    val cantidadTomates = 7
+    val cantidadNopales = 15
+    val cantidadManzanas = 4
+
+    val costoPepinos = pepino * cantidadPepinos
+    val costoAguacates = aguacate * cantidadAguacates
+    val costoTomates = tomate * cantidadTomates
+    val costoNopales = nopales * cantidadNopales
+    val costoManzanas = manzana * cantidadManzanas
+
+    val costoTotal = costoPepinos + costoAguacates + costoTomates + costoNopales + costoManzanas
+
+    val costoObtencion = costoTotal * 0.3
+    val gastosOperacion = costoTotal * 0.2
+    val ganancia = costoTotal * 0.5
+
+    println("El costo total es: $$costoTotal")
+    println("El costo de obtención es: $$costoObtencion")
+    println("Los gastos de operación son: $$gastosOperacion")
+    println("La ganancia es: $$ganancia")
+}

@@ -1,0 +1,8 @@
+fun main() {
+    val num1 = 1
+    val num2 = 2
+
+    val mayor = if (num1 > num2) num1 else num2
+
+    println("Entre $num1 y $num2, el mayor es $mayor")
+}
