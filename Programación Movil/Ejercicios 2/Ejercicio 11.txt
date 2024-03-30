@@ -1,0 +1,13 @@
+fun main() {
+    val mensajes = arrayOf("hola", "adios", "la cadena contiene hola", "saludar", "", "otro mensaje")
+    for (x in mensajes) {
+        var resultado = when {
+            x == "hola" || x == "adios" -> "bienvenido"
+            x.contains("hola") -> "hola mundo!"
+            x == "saludar" -> "enviamos saludos pariente"
+            x.isEmpty() -> "silencio"
+            else -> "no podemos entender que quiere decir"
+        }
+        println("$x - $resultado")
+    }
+}

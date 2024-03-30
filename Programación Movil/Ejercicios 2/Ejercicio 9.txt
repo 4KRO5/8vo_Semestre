@@ -1,0 +1,15 @@
+fun main() {
+    val edades = listOf(4, 70, 99, 15, 8, 30, 43)
+    for (edad in edades) {
+        val etapa = when {
+            edad in 0..5 -> "Infancia"
+            edad in 6..11 -> "Niñez"
+            edad in 12..19 -> "Adolescencia"
+            edad in 20..30 -> "Juventud"
+            edad in 31..59 -> "Adultez"
+            edad in 60..120 -> "Ancianidad"
+            else -> "Edad desconocida"
+        }
+        println("La persona de $edad años está en la etapa de $etapa")
+    }
+}

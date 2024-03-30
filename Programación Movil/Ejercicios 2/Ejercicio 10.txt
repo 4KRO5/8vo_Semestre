@@ -1,0 +1,21 @@
+fun main() {
+    val calificaciones = listOf(0, 10, 59, 60, 75, 89, 100)
+    for (calificacion in calificaciones) {
+        println("${evaluar(calificacion)}, ${aprobatorio(calificacion)}")
+    }
+}
+
+fun evaluar(calificacion: Int): String {
+    return when {
+        calificacion in 0..59 -> "Insuficiente"
+        calificacion in 60..69 -> "Suficiente"
+        calificacion in 70..79 -> "Regular"
+        calificacion in 80..89 -> "Muy bien"
+        calificacion in 90..100 -> "Excelente"
+        else -> "Calificación desconocida"
+    }
+}
+
+fun aprobatorio(calificacion: Int): String {
+    return if (calificacion in 60..100) "Aprobado" else "No aprobado"
+}
