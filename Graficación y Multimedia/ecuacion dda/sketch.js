@@ -21,5 +21,8 @@ function drawLine(x1, y1, x2, y2) {
   
 
 function draw() {
-	drawLine(250, 50, 50, 100);
+	drawLine(0, 250, 500, 250);
+	drawLine(250, 0, 250, 500);
+	drawLine(0, 0, 500, 500);
+	drawLine(0, 500, 500, 0);
 }
